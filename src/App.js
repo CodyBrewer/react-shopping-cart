@@ -18,12 +18,13 @@ function App() {
 
   const addItem = item => {
     // add the given item to the cart
-    setCart([...cart, item]);
+    const product = { ...item, cartId: Date.now() };
+    setCart([...cart, product]);
   };
 
   const removeItem = itemToRemoveId => {
     // remove the given item from the cart
-    setCart(cart.filter(item => itemToRemoveId !== item.id));
+    setCart(cart.filter(item => itemToRemoveId !== item.cartId));
   };
 
   return (

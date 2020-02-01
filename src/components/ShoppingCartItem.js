@@ -11,7 +11,7 @@ const Item = props => {
         <button
           onClick={e => {
             e.preventDefault();
-            props.removeItem(props.id);
+            props.removeItem(props.cartId);
           }}
         >
           Remove from cart
